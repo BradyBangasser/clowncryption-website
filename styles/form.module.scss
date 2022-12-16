@@ -130,3 +130,35 @@
         }
     }
 }
+
+.loading {
+    background-color: grey;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    opacity: 90%;
+    height: fit-content;
+    width: 12vh;
+    z-index: 55555;
+    text-align: center;
+    align-items: center;
+    display: none;
+
+    & h1 {
+        animation: spin 1s infinite;
+        animation-delay: .7s;
+        margin: 1px;
+    }
+
+    & h6 {
+        margin: 1px;
+    }
+}
+
+@keyframes spin {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  

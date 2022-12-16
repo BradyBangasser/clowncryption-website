@@ -27,6 +27,10 @@ export default function TryItOut() {
             return [val.name, val.value]
         }).filter((val) => typeof val !== "undefined") as any)
 
+        const loadingIcon = document.getElementsByClassName(formStyles.loading)[0];
+        const submitButton = document.getElementById("submitButton")
+
+        loadingIcon.setAttribute("style", "display:block;")
         const res = await fetch("/api/crypt", {
             method: "POST",
             headers: {
@@ -35,7 +39,10 @@ export default function TryItOut() {
             body: JSON.stringify(formVals)
         })
 
-        if (res.status !== 200) return alert((await res.json() as any).code)
+        if (res.status !== 200) {
+            loadingIcon.setAttribute("style", "display:hidden;")
+            return alert(`${await res.text()}`)
+        }
 
         const message = await res.text()
 
@@ -43,6 +50,7 @@ export default function TryItOut() {
         const outDiv = document.getElementsByClassName(formStyles.outputDiv)[0];
 
         (document.getElementById("copyButton") as any).textContent = "Copy"
+        loadingIcon.setAttribute("style", "display:hidden;")
         formDiv.setAttribute("style", "display:none");
         outDiv.setAttribute("style", "display:block")
         outDiv.children[outDiv.children.length - 1].append(message)
@@ -63,6 +71,10 @@ export default function TryItOut() {
 
     return (
         <Layout name="Try It Out">
+            <div className={formStyles.loading}>
+                <h1>🤡</h1>
+                <h6>Clowning Around...</h6>
+            </div>
             <div className={formStyles.formContainer}>
                 <form id={"encryptForm"} onSubmit={handleForm}>
                     <ul style={{
@@ -179,7 +191,7 @@ export default function TryItOut() {
                         </li>
                         <li>
                             <div className={`center ${formStyles.formInputContainer}`}>
-                                <input type="submit" />
+                                <input type="submit" id="submitButton" />
                             </div>
                         </li>
                     </ul>
