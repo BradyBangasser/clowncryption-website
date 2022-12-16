@@ -27,7 +27,7 @@ export default function TryItOut() {
             return [val.name, val.value]
         }).filter((val) => typeof val !== "undefined") as any)
 
-        const res = await fetch("https://clowncryption.itsnotcatchy.com/api/crypt", {
+        const res = await fetch("/api/crypt", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

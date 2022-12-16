@@ -34,7 +34,7 @@ const normalPersonContent: { [key: string]: string[] } = {
 }
 
 export default function HowItWorks() {
-    const modes = ["Nerd", "Ultra Nerd", "Normal Human"]
+    const modes = ["Nerd", "Normal Human", "Ultra Nerd"]
     const [mode, setMode] = useState(modes[0])
     const [content, setContent] = useState(nerdContent)
 
