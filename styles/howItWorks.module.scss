@@ -1,0 +1,18 @@
+.content {
+    width: 100%;
+    & .head {
+        text-align: center;
+
+        & > ul > li {
+            list-style-type: none;
+        }
+    }
+
+    & ul {
+        text-align: left;
+    }
+
+    & a, a:visited {
+        color: white;
+    }
+}

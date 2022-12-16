@@ -1,0 +1,18 @@
+.mediaButtonDiv {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    margin: 5px;
+    transition: 0.5s;
+    &:hover .mediaButtonIcon {
+        transform: rotate(360deg);
+    }
+}
+
+.mediaButtonIcon {
+    margin: auto;
+    transition: 0.5s;
+}

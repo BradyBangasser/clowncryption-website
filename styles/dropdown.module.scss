@@ -1,0 +1,33 @@
+.dropdown {
+    transition: 1s;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    list-style-type: none;
+    overflow: auto;
+
+    & .HAI {
+        margin-right: 5px;
+        transition: 500ms;
+    }
+
+    &:hover .HAI {
+        transform: rotate(90deg);
+    }
+
+    & .dropdownMenu {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.50s;
+        display: block;
+    }
+
+    & li {
+        list-style-type: none;
+    }
+
+    &:hover .dropdownMenu {
+        max-height: 500px;
+        transition: max-height 0.50s;
+    }
+}

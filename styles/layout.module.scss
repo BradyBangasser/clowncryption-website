@@ -1,0 +1,68 @@
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    background-color: green;
+    display: flex;
+    color: white;
+}
+
+.logo {
+    transition: 1s;
+    width: min-content;
+    display: inline-flex;
+    color: white;
+    margin: 5px;
+    padding-left: 5px;
+}
+
+.navbarButton {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.content {
+    display: flex;
+    width: 80%;
+    margin: 3% 10% 3% 10%;
+    padding-bottom: auto;
+    z-index: 1;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: green;
+    width: 100%;
+    display: flex;
+    height: max-content;
+}
+
+.footerDiv {
+    text-align: center;
+    width: 100%;
+}
+
+.linksDiv {
+    float: right;
+    margin-left: auto;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    padding: 10px;
+    & a, a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}

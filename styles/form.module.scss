@@ -1,0 +1,132 @@
+.formContainer {
+    // border: 2.5px solid whitesmoke;
+    display: table;
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid white;
+    height: min-content;
+    padding: 0px;
+}
+
+.formInputContainer {
+    width: auto;
+    padding: 5px;
+    display: flex;
+    text-decoration: none;
+    border: 1px solid white;
+    flex: 1;
+    overflow: hidden;
+
+    & input {
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        color: white;
+    }
+
+    & div {
+        margin-right: 5%;
+        display: block;
+        width: 100%;
+    }
+
+    & input[type="submit"] {
+        background-color: green;
+        width: 20%;
+        margin: auto;
+        border-radius: 25px;
+        padding: 2px;
+
+        &:hover {
+            background-color: rgb(1, 168, 1);
+        }
+    }
+}
+
+.underline {
+    width: 100%;
+    height: 0px;
+    background-color: white;
+    border: .5px solid white;
+}
+
+.inputTable {
+    border-collapse: collapse;
+    border: "1px solid blue";
+}
+
+.formInputDropContainer {
+    width: auto;
+    padding: 5px;
+    display: flex;
+    flex: 1;
+
+    & input {
+        width: auto;
+        border: none;
+        background-color: transparent;
+        resize: none;
+        outline: none;
+        color: white;
+    }
+
+    & div {
+        margin-right: 5%;
+        display: block;
+        width: 100%;
+    }
+}
+
+.select {
+    background-color: transparent;
+    color: white;
+    border: 0px;
+    width: auto;
+
+    &:focus-visible {
+        outline: none;
+    }
+}
+
+.messageTextArea {
+    background-color: transparent;
+    width: 100%;
+    margin: 5px;
+    height: auto;
+    color: white;
+    min-height: 50px;
+    resize: none;
+    height: auto;
+}
+
+.outputDiv {
+    display: none;
+    width: 100%;
+    height: auto;
+
+    & p {
+        border: 1px solid white;
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(87, 87, 87);
+        text-overflow: wrap;
+        height: auto;
+        overflow-wrap: anywhere;
+    }
+
+    & > div > button {
+        margin: auto;
+        margin-left: 5px;
+        background-color: green;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        padding: 5px;
+
+        &:hover {
+            background-color: rgb(1, 168, 1);
+        }
+    }
+}
